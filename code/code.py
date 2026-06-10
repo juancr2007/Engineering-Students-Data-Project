@@ -3,10 +3,11 @@ import pandas as pd
 import csv
 import kagglehub
 
-
+# Download latest version
 path = kagglehub.dataset_download("robiulhasanjisan/university-student-performance-and-habits-dataset")
 
 print("Path to dataset files:", path)
+
 
 project = Path("Final Project SJS")
 
@@ -20,60 +21,57 @@ output_folder.mkdir(parents=True, exist_ok=True)
 code_folder.mkdir(parents=True, exist_ok=True)
 features_folder.mkdir(parents=True, exist_ok=True)
 
-# -------------------------------------------------------------------
 input_csv = data_folder / "Student_data.csv"
 
 student_data_df = pd.read_csv(input_csv)
 
-# llllllllllllllllllllllllllllllllllllllllllllllllllllll
+# -------------------------------------------------------------------
+# tuple_ = student_data_df.shape
 
+# row_count = student_data_df.shape[0]
 
-tuple_ = student_data_df.shape
+# column_count = student_data_df.shape[1]
 
-row_count = student_data_df.shape[0]
+# column_names = student_data_df.columns
 
-column_count = student_data_df.shape[1]
+# if "Attendance_Pct" in student_data_df.columns:
+#     Attendance_Pct_count = student_data_df["Attendance_Pct"].value_counts()
 
-column_names = student_data_df.columns
+# nas = student_data_df.isna().sum()
 
-if "Attendance_Pct" in student_data_df.columns:
-    Attendance_Pct_count = student_data_df["Attendance_Pct"].value_counts()
+# head_val = student_data_df.head() 
 
-nas = student_data_df.isna().sum()
+# tail_val = student_data_df.tail() 
 
-head_val = student_data_df.head() 
+# d_types_df = student_data_df.dtypes 
 
-tail_val = student_data_df.tail() 
+# df_desc = student_data_df.describe()
 
-d_types_df = student_data_df.dtypes 
+# age = student_data_df["Age"].median()
 
-df_desc = student_data_df.describe()
+# names = {
+#     "Study_Hours_Per_Day" : "Hours_For_Study",
+#     "Social_Hours_Week" : "Free_Time"
+# }
+# new_names = student_data_df.rename(columns=names)
 
-age = student_data_df["Age"].median()
+# engineering_students = student_data_df[student_data_df["Major"]=="Engineering"]
 
-names = {
-    "Study_Hours_Per_Day" : "Hours_For_Study",
-    "Social_Hours_Week" : "Free_Time"
-}
-new_names = student_data_df.rename(columns=names)
+# review_output = project / "output" / "total_inspection.txt"
+# with open(review_output, "a") as file:
+#     file.write(f"Shape of the dataframe: {tuple_}\n")
+#     file.write(f"\n# of rows: {row_count}\n")
+#     file.write(f"\n# of columns: {column_count}\n")
 
-engineering_students = student_data_df[student_data_df["Major"]=="Engineering"]
+#     file.write("column names:\n")
+#     for column in column_names:
+#         file.write(f"- {column}\n")
 
-review_output = project / "output" / "total_inspection.txt"
-with open(review_output, "a") as file:
-    file.write(f"Shape of the dataframe: {tuple_}\n")
-    file.write(f"\n# of rows: {row_count}\n")
-    file.write(f"\n# of columns: {column_count}\n")
-
-    file.write("column names:\n")
-    for column in range(column_count):
-        file.write(f"- {column_count}\n")
-
-    file.write(f"\nAttendence percentage count for each category: \n{Attendance_Pct_count}\n")
-    file.write(f"\ntop 5 rows:\n{head_val}\n")
-    file.write(f"\nbottom 5 rows:\n{tail_val}")
-    file.write(f"\ndatatypes of each column:\n{d_types_df}\n")
-    file.write(f"\nNumeric values for all data:\n{df_desc}")
+#     file.write(f"\nAttendence percentage count for each category: \n{Attendance_Pct_count}\n")
+#     file.write(f"\ntop 5 rows:\n{head_val}\n")
+#     file.write(f"\nbottom 5 rows:\n{tail_val}")
+#     file.write(f"\ndatatypes of each column:\n{d_types_df}\n")
+#     file.write(f"\nNumeric values for all data:\n{df_desc}")
 
 
 # ----------------------------------------------------------------------------------------------------------
@@ -81,60 +79,61 @@ with open(review_output, "a") as file:
 # COMMENT OUT EVERYTHING ABOVE OR BELOW THIS LINE TO PUT THE DATA IN DIFFERENT FILES
                         # eng.inspection.txt
 # -------------------------------------------------------------------------------------------------------------
-# engineering_students = student_data_df[student_data_df["Major"]=="Engineering"]
+engineering_students = student_data_df[student_data_df["Major"]=="Engineering"]
 
-# engineering_output = project / "data" / "engineering_data.csv"
+engineering_output = project / "data" / "engineering_data.csv"
 
-# engineering_students.to_csv(engineering_output, index=False)
+engineering_students.to_csv(engineering_output, index=False)
 
-# new_csv = data_folder / "engineering_data.csv"
+new_csv = data_folder / "engineering_data.csv"
 
-# eng_student_df = pd.read_csv(new_csv)
-# # llllllllllllllllllllllllllllllllllllllllllllllll
+eng_student_df = pd.read_csv(new_csv)
+# llllllllllllllllllllllllllllllllllllllllllllllll
 
-# tuple_ = eng_student_df.shape
+tuple_ = eng_student_df.shape
 
-# row_count = eng_student_df.shape[0]
+row_count = eng_student_df.shape[0]
 
-# column_count = eng_student_df.shape[1]
+column_count = eng_student_df.shape[1]
 
-# column_names = eng_student_df.columns
+column_names = eng_student_df.columns
 
-# if "Attendance_Pct" in eng_student_df.columns:
-#     Attendance_Pct_count = student_data_df["Attendance_Pct"].value_counts()
+if "Attendance_Pct" in eng_student_df.columns:
+    Attendance_Pct_count = student_data_df["Attendance_Pct"].value_counts()
 
-# nas = eng_student_df.isna().sum()
+nas = eng_student_df.isna().sum()
 
-# head_val = eng_student_df.head() 
+head_val = eng_student_df.head() 
 
-# tail_val = eng_student_df.tail() 
+tail_val = eng_student_df.tail() 
 
-# d_types_df = eng_student_df.dtypes 
+d_types_df = eng_student_df.dtypes 
 
-# df_desc = eng_student_df.describe()
+df_desc = eng_student_df.describe()
 
-# age = eng_student_df["Age"].median()
+age = eng_student_df["Age"].median()
 
-# names = {
-#     "Study_Hours_Per_Day" : "Hours_For_Study",
-#     "Social_Hours_Week" : "Free_Time"
-# }
-# new_names = eng_student_df.rename(columns=names)
+names = {
+    "Study_Hours_Per_Day" : "Hours_For_Study",
+    "Social_Hours_Week" : "Free_Time"
+}
+new_names = eng_student_df.rename(columns=names)
 
-# engineering_students = student_data_df[student_data_df["Major"]=="Engineering"]
+engineering_students = student_data_df[student_data_df["Major"]=="Engineering"]
 
-# review_output = project / "output" / "eng_inspection.txt"
-# with open(review_output, "a") as file:
-#     file.write(f"Shape of the dataframe: {tuple_}\n")
-#     file.write(f"\n# of rows: {row_count}\n")
-#     file.write(f"\n# of columns: {column_count}\n")
+review_output = project / "output" / "eng_inspection.txt"
+with open(review_output, "a") as file:
+    file.write(f"Shape of the dataframe: {tuple_}\n")
+    file.write(f"\n# of rows: {row_count}\n")
+    file.write(f"\n# of columns: {column_count}\n")
 
-#     file.write("column names:\n")
-#     for column in range(column_count):
-#         file.write(f"- {column_count}\n")
+    file.write("column names:\n")
+    for column in column_names:
+        file.write(f"- {column}\n")
 
-#     file.write(f"\nAttendence percentage count for each category: \n{Attendance_Pct_count}\n")
-#     file.write(f"\ntop 5 rows:\n{head_val}\n")
-#     file.write(f"\nbottom 5 rows:\n{tail_val}")
-#     file.write(f"\ndatatypes of each column:\n{d_types_df}\n")
-#     file.write(f"\nNumeric values for all data:\n{df_desc}")
+    file.write(f"\nAttendence percentage count for each category: \n{Attendance_Pct_count}\n")
+    file.write(f"\ntop 5 rows:\n{head_val}\n")
+    file.write(f"\nbottom 5 rows:\n{tail_val}")
+    file.write(f"\ndatatypes of each column:\n{d_types_df}\n")
+    file.write(f"\nNumeric values for all data:\n{df_desc}")
+    file.write(f"\nNumeric values for all data:\n{df_desc}")
