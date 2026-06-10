@@ -4,16 +4,28 @@ Shape of the dataframe: (5000, 10)
 
 # of columns: 10
 column names:
-- 10
-- 10
-- 10
-- 10
-- 10
-- 10
-- 10
-- 10
-- 10
-- 10
+Shape of the dataframe: (5000, 10)
+
+# of rows: 5000
+
+# of columns: 10
+column names:
+Shape of the dataframe: (5000, 10)
+
+# of rows: 5000
+
+# of columns: 10
+column names:
+- Student_ID
+- Gender
+- Age
+- Major
+- Attendance_Pct
+- Study_Hours_Per_Day
+- Previous_CGPA
+- Sleep_Hours
+- Social_Hours_Week
+- Final_CGPA
 
 Attendence percentage count for each category: 
 Attendance_Pct
