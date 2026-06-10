@@ -14,3 +14,16 @@ The information takes the dataset from "University Student Performance &amp; Hab
   - eng_inspection.txt -- Presents data gathered from the enginerring_data.csv
   - total_inspection.txt -- Presents data gathered from the Student_data.csv
    
+## Data Gathered
+The data that was collected from the csv files is listed here in order:
+- Shape of the dataframe
+  - presented as a tuple
+- Number of rows
+- Number of columns
+- Name of columns
+- Attendance percentage for each category
+  - How many people attended class per percentage
+- Top 5 rows of the dataset
+- Bottom 5 rows of the dataset
+- Datatypes of each column
+- Numeric values for all datatypes
