@@ -1,8 +1,11 @@
-# Engineering-Students-Data-Project
+# Analyzing Engineering Students Performance and Study Habits
 This is the final project for SJS Program for Coding. The data was filtered to help narrow down the thousands of college students information down to those who are majoring in engineering.
 
+
+
 ## Dataset
-The information takes the dataset from "University Student Performance &amp; Habits Dataset" by Robiul Hasan Jisan from Kaggle.
+The information takes the dataset "University Student Performance &amp; Habits Dataset" by Robiul Hasan Jisan from Kaggle.
+- Kaggle link: [University Student Performance & Habits Dataset](https://www.kaggle.com/datasets/robiulhasanjisan/university-student-performance-and-habits-dataset)
 
 ## Folder Structure
 - code/
