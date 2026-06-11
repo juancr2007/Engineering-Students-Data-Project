@@ -8,23 +8,23 @@ The information takes the dataset "University Student Performance &amp; Habits D
 - Kaggle link: [University Student Performance & Habits Dataset](https://www.kaggle.com/datasets/robiulhasanjisan/university-student-performance-and-habits-dataset)
 
 ## Folder Structure
-- code/
-  - code.py -- This file contains the code that helped create all of the folders and files that are in this repository
-  - data_new.py -- This file contains the code that helped create all the graphs in the features folder of this repository
-- data/
-  - Student_data.csv -- Table that includes the data of all 5000 students
-- features/
-  - Final_CGPA_bar.png -- Histogram showing how many students achieved each CGPA value
-  - Social_hours_gender.png -- Boxplot showing how many hours students of each gender spend socially.
-  - att_hist.png -- Histogram showing how many students attendance a certain percentage of their classes
-  - hist_age_vs_att.png -- Average attendance percentage of classes for each student age
-  - p_vs_f.png -- Comparing the average previous CGPA to the final CGPA of all students
-  - scatter_att_vs_gpa.png -- Scatter plot that plots every students attendance percentage with their final CGPA
-  - scatter_studying_vs_gpa.png -- Scatter plot that plots every students hours specnt studying with their final CGPA
-- output/
-  - eng_inspection.txt -- Presents data gathered from the enginerring_data.csv
-  - engineering_data.csv -- Table that inludes the data for only Engineering students that were present in the dataset
-  - total_inspection.txt -- Presents data gathered from the Student_data.csv
+- `code/`
+  - `code.py` -- This file contains the code that helped create all of the folders and files that are in this repository
+  - `data_new.py` -- This file contains the code that helped create all the graphs in the features folder of this repository
+- `data/`
+  - `Student_data.csv` -- Table that includes the data of all 5000 students
+- `features/`
+  - `Final_CGPA_bar.png` -- Histogram showing how many students achieved each CGPA value
+  - `Social_hours_gender.png` -- Boxplot showing how many hours students of each gender spend socially.
+  - `att_hist.png` -- Histogram showing how many students attendance a certain percentage of their classes
+  - `hist_age_vs_att.png` -- Average attendance percentage of classes for each student age
+  - `p_vs_f.png` -- Comparing the average previous CGPA to the final CGPA of all students
+  - `scatter_att_vs_gpa.png` -- Scatter plot that plots every students attendance percentage with their final CGPA
+  - `scatter_studying_vs_gpa.png` -- Scatter plot that plots every students hours specnt studying with their final CGPA
+- `output/`
+  - `eng_inspection.txt` -- Presents data gathered from the enginerring_data.csv
+  - `engineering_data.csv` -- Table that inludes the data for only Engineering students that were present in the dataset
+  - `total_inspection.txt` -- Presents data gathered from the Student_data.csv
    
 ## Data Gathered
 The data that was collected from the csv files is listed here in order:
