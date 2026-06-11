@@ -7,9 +7,9 @@ The information takes the dataset from "University Student Performance &amp; Hab
 ## Folder Structure
 - code/
   - code.py -- This file contains the code that helped create all of the folders and files that are in this repository
+  - data_new.py -- This file contains the code that helped create all the graphs in the features folder of this repository
 - data/
   - Student_data.csv -- Table that includes the data of all 5000 students
-  - engineering_data.csv -- Table that inludes the data for only Engineering students that were present in the dataset
 - features/
   - Final_CGPA_bar.png -- Histogram showing how many students achieved each CGPA value
   - Social_hours_gender.png -- Boxplot showing how many hours students of each gender spend socially.
@@ -20,6 +20,7 @@ The information takes the dataset from "University Student Performance &amp; Hab
   - scatter_studying_vs_gpa.png -- Scatter plot that plots every students hours specnt studying with their final CGPA
 - output/
   - eng_inspection.txt -- Presents data gathered from the enginerring_data.csv
+  - engineering_data.csv -- Table that inludes the data for only Engineering students that were present in the dataset
   - total_inspection.txt -- Presents data gathered from the Student_data.csv
    
 ## Data Gathered
